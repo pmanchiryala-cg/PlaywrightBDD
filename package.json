@@ -1,0 +1,21 @@
+{
+  "name": "playwrightbddjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "bddgen": "bddgen",
+    "test": "npm run bddgen && playwright test",
+    "test:ui": "npm run bddgen && playwright test --project=edge-ui",
+    "test:api": "npm run bddgen && playwright test --project=edge-api"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0",
+    "dotenv": "^17.4.2",
+    "playwright-bdd": "^8.5.0"
+  }
+}
