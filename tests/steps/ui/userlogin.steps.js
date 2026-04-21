@@ -9,20 +9,36 @@ Before(async ({page}) => {
   loginPage = new LoginPage(page);
 });
 
-Given('I navigate to {string}', async ({}, url) => {
+Given('I navigate to the login page {string}', async ({}, url) => {
   await loginPage.launchURL(url)
 });
 
-When('I enter valid credentials username {string} and password {string}', async ({}, username, password) => {
+When('I login with username {string} and password {string}',
+  async function ({}, username, password) {
     await loginPage.enterUsrname(username);
     await loginPage.enterPassword(password);
-  
-});
-
-When('I click on the login button', async () => {
     await loginPage.clickLogin();
-});
+  }
+);
 
-Then('I should see the page containing {string}', async ({}, expectedText) => {
-    await expect(loginPage.successMessage).toContainText(expectedText);
-});
+Then('I should see a success message {string}',
+  async function ({}, message) {
+    await expect(loginPage.successMessage).toHaveText(message);
+  }
+);
+
+Then('I should see an error message {string}',
+  async function ({}, message) {
+    await expect(loginPage.errorMessage).toHaveText(message);
+  }
+);
+
+/*
+
+Then('I should see message {string}',
+  async function ({}, message) {
+    await expect(loginPage.message).toHaveText(message);
+  }
+);
+
+*/
