@@ -1,4 +1,4 @@
-// Generated from: tests\features\ui\userlogin.feature
+// Generated from: tests\features\ui\login.feature
 import { test } from "playwright-bdd";
 
 test.describe('Login functionality', () => {
@@ -30,7 +30,7 @@ test.beforeEach('BeforeEach Hooks', ({ $runScenarioHooks, page }) => $runScenari
 
 test.use({
   $test: [({}, use) => use(test), { scope: 'test', box: true }],
-  $uri: [({}, use) => use('tests\\features\\ui\\userlogin.feature'), { scope: 'test', box: true }],
+  $uri: [({}, use) => use('tests\\features\\ui\\login.feature'), { scope: 'test', box: true }],
   $bddFileData: [({}, use) => use(bddFileData), { scope: "test", box: true }],
 });
 
