@@ -37,6 +37,7 @@ When('User login with the following details:', async function ({}, dataTable) {
         }
 
         actualMessages.push(message.trim());
+        console.log("Actual Messages so far: ", actualMessages);
 
         // Navigate back for next iteration
         //await this.page.goBack();
@@ -45,9 +46,7 @@ When('User login with the following details:', async function ({}, dataTable) {
 
 Then('User should see the corresponding messages:', async function ({}, dataTable) {
     const expectedRows = dataTable.hashes();
-
     const expectedMessages = expectedRows.map(row => row.message.trim());
-
     expect(actualMessages).toEqual(expectedMessages);
 });
 

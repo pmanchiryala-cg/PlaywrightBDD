@@ -9,7 +9,7 @@ Feature: Login functionality
     Then I should see a "<type>" message "<message>"
 
     Examples:
-      | uname    | pwd         | type    | message                  |
+      | username | password    | type    | message                  |
       | studet1  | Password123 | error   | Your username is invalid!|
       | student  | test123     | error   | Your password is invalid!|
       | student  | Password123 | success | Logged In Successfully   |

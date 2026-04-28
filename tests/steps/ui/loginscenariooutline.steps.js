@@ -9,20 +9,20 @@ Before(async ({ page }) => {
     loginPage = new LoginPage(page);
 });
 
-Given('I navigate to the login homepage {string}', async ({ page }, url) => {
+Given('I navigate to the login homepage {string}', async ({},url) => {
     await loginPage.launchURL(url);
 });
 
 When('I login with uname {string} and pwd {string}',
-    async ({ page }, uname, pwd) => {
-        await loginPage.enterUsrname(uname);
-        await loginPage.enterPassword(pwd);
+    async ({}, username, password) => {
+        await loginPage.enterUsrname(username);
+        await loginPage.enterPassword(password);
         await loginPage.clickLogin();
     }
 );
 
 Then('I should see a {string} message {string}',
-    async ({ page }, type, expectedMessage) => {
+    async ({}, type, expectedMessage) => {
         let locator;
 
         if (type === 'success') {
