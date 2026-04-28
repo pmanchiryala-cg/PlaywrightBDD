@@ -1,4 +1,4 @@
-// Generated from: tests\features\api\sf_eapi_POST_EPC_request.feature
+// Generated from: tests\features\api\sf_eapi_POST_epc_request.feature
 import { test } from "playwright-bdd";
 
 test.describe('Validate SF EAPI POST EPC Request', () => {
@@ -17,7 +17,7 @@ test.beforeEach('BeforeEach Hooks', ({ $runScenarioHooks, page }) => $runScenari
 
 test.use({
   $test: [({}, use) => use(test), { scope: 'test', box: true }],
-  $uri: [({}, use) => use('tests\\features\\api\\sf_eapi_POST_EPC_request.feature'), { scope: 'test', box: true }],
+  $uri: [({}, use) => use('tests\\features\\api\\sf_eapi_POST_epc_request.feature'), { scope: 'test', box: true }],
   $bddFileData: [({}, use) => use(bddFileData), { scope: "test", box: true }],
 });
 
