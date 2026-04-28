@@ -35,5 +35,6 @@ Then('I should see a {string} message {string}',
 
         await expect(locator).toBeVisible();
         await expect(locator).toHaveText(expectedMessage);
+        console.log(expectedMessage);
     }
 );
