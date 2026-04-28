@@ -2,7 +2,7 @@ Feature: Login functionality
 
   Background:
     Given I navigate to the login page "https://practicetestautomation.com/practice-test-login"
-  @smoke
+  @test
   Scenario: Successful login with valid credentials
     When I login with username "student" and password "Password123"
     Then I should see a success message "Logged In Successfully"

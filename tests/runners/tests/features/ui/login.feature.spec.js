@@ -7,7 +7,7 @@ test.describe('Login functionality', () => {
     await Given('I navigate to the login page "https://practicetestautomation.com/practice-test-login"'); 
   });
   
-  test('Successful login with valid credentials', { tag: ['@smoke'] }, async ({ When, Then }) => { 
+  test('Successful login with valid credentials', { tag: ['@test'] }, async ({ When, Then }) => { 
     await When('I login with username "student" and password "Password123"'); 
     await Then('I should see a success message "Logged In Successfully"'); 
   });
