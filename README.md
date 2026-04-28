@@ -37,5 +37,8 @@ npx playwright test tests/runners/tests/features/ui/login.feature.spec.js
 Run all tests:
 npx playwright test
 
+Run UI tests:
+npx playwright test -- grep "ui"
+
 
 View HTML report after run: open playwright-report/index.html or Cucumber report cucumber-report/index.html
