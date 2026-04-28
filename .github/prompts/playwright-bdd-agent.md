@@ -17,7 +17,7 @@ BDD setup:
 
 Tests are executed using:
 
-* npm run test
+* npx playwright test
 * npm run test:ui
 * npm run test:api
 

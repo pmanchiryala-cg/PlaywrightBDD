@@ -1,0 +1,5 @@
+- Use Playwright with playwright-bdd
+- Follow Given/When/Then strictly
+- Keep steps reusable
+- Use getByRole selectors
+- Support Microsoft Edge project
