@@ -1,3 +1,6 @@
+---
+mode: agent
+---
 # Playwright BDD Copilot Prompt
 
 ## Context
@@ -18,8 +21,6 @@ BDD setup:
 Tests are executed using:
 
 * npx playwright test
-* npm run test:ui
-* npm run test:api
 
 ## Coding Standards
 

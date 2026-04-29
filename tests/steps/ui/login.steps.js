@@ -2,6 +2,7 @@ const {createBdd} = require('playwright-bdd');
 const {Given, When, Then, Before} = createBdd();
 const {LoginPage} = require('../../pages/LoginPage');
 const {expect} = require('@playwright/test');
+const { debug } = require('node:console');
 
 let loginPage
 
@@ -32,13 +33,3 @@ Then('I should see an error message {string}',
     await expect(loginPage.errorMessage).toHaveText(message);
   }
 );
-
-/*
-
-Then('I should see message {string}',
-  async function ({}, message) {
-    await expect(loginPage.message).toHaveText(message);
-  }
-);
-
-*/
