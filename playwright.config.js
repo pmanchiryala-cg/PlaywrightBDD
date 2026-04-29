@@ -5,6 +5,7 @@ import { defineBddConfig, cucumberReporter } from 'playwright-bdd';
 import dotenv from 'dotenv';
 dotenv.config();
 
+/** @type {any} */
 const bddConfig = defineBddConfig({
   features: 'tests/features/**/*.feature',
   steps: 'tests/steps/**/*.js',
