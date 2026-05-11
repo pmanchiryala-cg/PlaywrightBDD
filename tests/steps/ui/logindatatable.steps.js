@@ -45,7 +45,7 @@ When('User login with the following details:', async function ({}, dataTable) {
 });
 
 Then('User should see the corresponding messages:', async function ({}, dataTable) {
-    const expectedRows = dataTable.hashes();
+    const expectedRows = dataTable.hashes(); //dataTable is the table from the feature file. .hashes() converts it into an array of objects.
     const expectedMessages = expectedRows.map(row => row.message.trim());
     expect(actualMessages).toEqual(expectedMessages);
 });
