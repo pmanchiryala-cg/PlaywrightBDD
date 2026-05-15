@@ -7,8 +7,8 @@
 /playwright/.cache/
 /playwright/.auth/
 .env
-/cucumber-report/index.html
-/cucumber-report/cucumber.json
+/cucumber-report/index.html/
+/cucumber-report/cucumber.json/
 /cucumber-report/screenshots/
 /cucumber-report/videos/
 /cucumber-report/trace/
