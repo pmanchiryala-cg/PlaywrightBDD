@@ -6,7 +6,7 @@ Playwright + Cucumber-style BDD test suite with API helpers and page objects.
 ## Requirements
 - Node.js (LTS)
 - npm
-- Environment variables in `.env` (see [src/api/authService.js](src/api/authService.js) — expects `CLIENT_ID` and `CLIENT_SECRET`)
+- Environment variables in `.env` 
 
 ## Setup
 
@@ -38,7 +38,7 @@ View HTML report after run: open playwright-report/index.html or Cucumber report
 - BDD features: [tests/features]
   - UI: [tests/features/ui/userlogin.feature]
   - API: [tests/features/api/sf_eapi_GET_healthcheck.feature]
-- Generated test runners: [tests/runners](tests/runners)
+- Generated test runners: [tests/runners]
 - Step definitions: [tests/steps]
   - UI steps: [`userlogin.steps`]
   - API steps: [`sf_eapi_GET_healthcheck.steps`]
