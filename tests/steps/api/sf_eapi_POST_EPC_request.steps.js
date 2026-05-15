@@ -5,7 +5,7 @@ import { expect } from '@playwright/test';
 
 const { Given, When, Then } = createBdd(test);
 
-const validPayload = {
+const epcrequest = {
   id: 'a1iAd0000048L9uIAE',
   address: {
     subBuildingName: 'Flat 305',
@@ -35,7 +35,7 @@ When('User send POST request to SF_EAPI {string} endpoint {string}',
         'client_secret': this.clientSecret,
         'Content-Type': 'application/json',
       },
-      data: JSON.stringify(validPayload),
+      data: JSON.stringify(epcrequest),
       timeout: 30000,
     });
   }
