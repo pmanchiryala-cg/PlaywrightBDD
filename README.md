@@ -29,6 +29,9 @@ npx playwright test
 Run UI tests:
 npx playwright test -- grep "ui"
 
+Run Tagged tests:
+npx playwright test --grep "@regression"
+
 
 View HTML report after run: open playwright-report/index.html or Cucumber report cucumber-report/index.html
 
