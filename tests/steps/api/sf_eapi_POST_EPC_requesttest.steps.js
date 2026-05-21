@@ -1,25 +1,31 @@
-    
+	
 import { test } from 'playwright-bdd';
 import { createBdd } from 'playwright-bdd';
 import { expect } from '@playwright/test';
-import fs from 'fs';
-import path from 'path';
 
 const { Given, When, Then } = createBdd(test);
 
-const epcrequest = JSON.parse(
-  fs.readFileSync(
-    path.resolve('test-data/epc_request.json'),
-    'utf-8'
-  )
-);
+const epcrequest = {
+  id: 'a1iAd0000048L9uIAE',
+  address: {
+    subBuildingName: 'Flat 305',
+    buildingName: 'Courtenay House',
+    buildingNumber: '9',
+    street: 'New Park Road',
+    dependentLocality: 'Brixton Hill',
+    city: 'LONDON',
+    state: 'London',
+    postalCode: 'SW2 4DN',
+    country: 'GB'
+  }
+};
 
-Given('User have access to SF_EAPI1 API', async function () {
+Given('User have access to SF_EAPI API', async function () {
   this.clientId = process.env.CLIENT_ID;
   this.clientSecret = process.env.CLIENT_SECRET;
 });
 
-When('User send POST request to SF_EAPI1 {string} endpoint {string}',
+When('User send POST request to SF_EAPI {string} endpoint {string}',
   async function ({ request }, baseUrl, endpoint) {
     const fullUrl = `${baseUrl}${endpoint}`;
 
@@ -35,7 +41,7 @@ When('User send POST request to SF_EAPI1 {string} endpoint {string}',
   }
 );
 
-Then('SF_EAPI1 should return a {int} Created response',
+Then('SF_EAPI should return a {int} Created response',
   async function ({}, statusCode) {
     expect(this.response.status()).toBe(statusCode);
     const body = await this.response.json();
